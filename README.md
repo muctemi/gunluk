@@ -1,2 +1,3 @@
-gunluk
-======
+
+
+Bu sekilde kod paylasabılırız
