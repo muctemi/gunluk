@@ -1,0 +1,39 @@
+<ion-header-bar class="bar-balanced">
+    <a class="button" ng-hide="deleting" ng-click="edit()"> Edit </a>
+    <a class="button" ng-show="deleting" ng-click="finish()"> Finish </a>
+    <h1 class="title">Notes</h1>
+    <a class="button" ng-hide="deleting" href="#/new"> + </a>
+
+</ion-header-bar>
+
+<ion-content>
+
+   
+   	<div class="list list-inset">
+  		<label class="item item-input">
+    	<i class="icon ion-search placeholder-icon"></i>
+    	<!-- <input type="text" placeholder="Search"> -->
+    	<input type="search" placeholder="Search" ng-model='query'>
+  		</label>
+	</div>
+   
+    
+    
+     <div class="card list" ng-repeat="note in notes | filter:query">             
+
+            
+            <a href="#/note/{{note._id}}" style="text-decoration:none;" > 
+            <div class="row" ng-mouseover="noteEdit = true" ng-mouseleave="noteEdit = false">
+            
+  				<div class="col col-center col-20"><h4><strong>{{ note.title}} </strong></h4></div>
+				<div class="col  col-center col-50"><i>{{note.text.substring(0, 30)}} ...</i></div>
+  				<div class="col col-center col-10" >{{note.date| moment}}</div>  	
+  				<div class="col col-center col-10" ng-show="noteEdit"><i class="icon ion-chevron-right" style="color:#ccc; font-size:16px;"></i></div>	  				
+  			
+			</div>          
+		 	</a>
+             
+   </div>
+	
+</ion-content>
+	

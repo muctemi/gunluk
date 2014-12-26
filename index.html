@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html ng-app="NoteApp">
+ 
+ 
+  <head>
+  
+        <!-- build:css({.tmp,app}) styles/main.css -->        
+        <link rel="stylesheet" href="styles/main.css">
+        
+        <!-- Ionic Libs -->        
+        <link rel="stylesheet" href="lib/ionic/css/ionic.css">
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+        <script src="lib/ionic/js/angular/angular-route.js"></script>
+        <!-- <script src="cordova.js"></script> -->
+        
+        <!-- Third Pary Libs -->        
+        <script src="lib/pouchdb/pouchdb-3.2.0.min.js"></script>
+    	<script src="lib/moment/moment.js"></script>    
+    	
+    	
+    	<!-- My app -->
+    	<script src="scripts/app.js"></script>
+        <script src="scripts/services/notes.js"></script>
+        <script src="scripts/services/pouchdb.js"></script>
+        <script src="scripts/filters/moment.js"></script>
+        <script src="scripts/controllers/notesCtrl.js"></script>
+        <script src="scripts/controllers/noteCtrl.js"></script>
+        <script src="scripts/controllers/newNoteCtrl.js"></script>
+        
+        
+</head>
+
+     
+ <body>
+    
+    <div ng-view=""/>
+    
+</body>
+</html>

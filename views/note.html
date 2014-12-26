@@ -1,0 +1,27 @@
+
+<ion-header-bar class="bar-balanced" ng-switch on="isDone">
+    <a class="button-prev" ng-click="back()"> Back </a>
+    <h1 class="title">{{title}}</h1>
+    <a class="button" ng-switch-when="true" href="#new"> + </a>
+    <a class="button" ng-switch-default ng-click="done()"> Done </a>
+</ion-header-bar>
+	
+<ion-content>
+	
+	  
+	  
+	  
+	  <div class="list">
+ 		 <label class="item item-input item-floating-label">
+    		<span class="input-label">Title</span>
+   			<input type="text" ng-change='needSave()' ng-model="newNote.title" placeholder="Title" ></input>    		
+  		</label>
+
+	   <label class="item item-input item-floating-label">
+    		<span class="input-label">Note</span>
+    	   <textarea rows="5" ng-change='needSave()' ng-model="newNote.text" placeholder="Note ..."></textarea>
+  	   </label>
+	</div>
+
+</ion-content>
+
